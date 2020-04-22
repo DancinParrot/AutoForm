@@ -21,4 +21,6 @@ python FormAutoCompleter.py
 ```
 
 ### Configuring the script
-The variables in this script must be configured first, to match your form.
+The variables in this script must be configured first to match that of your form.
+
+#### Eg.1 Radio Button
