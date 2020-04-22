@@ -7,4 +7,18 @@ This python script utilises Selenium to find elements in a form, fill them up ac
 
 ## Table of Contents
 * [Setup](#setup)
-* [How to use?](#how-to-use-?)
+* [Configuring the script](#configuring-the-script)
+
+### Setup
+Selenium must be installed.
+```bash
+pip install selenium
+```
+
+Run script
+```bash
+python FormAutoCompleter.py
+```
+
+### Configuring the script
+The variables in this script must be configured first, to match your form.
