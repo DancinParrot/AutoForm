@@ -4,13 +4,17 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from datetime import date
 
+#initialise webdriver and the link of the form
 browser = webdriver.Edge('C:/Users/kaizh/Downloads/msedgedriver.exe')
 browser.get('https://docs.google.com/forms/d/e/1FAIpQLSc8Gm2HKnrSGxAD3NVWi7wPQXgYVKsVs6fnLojxDY20gXqRFg/viewform')
 
-indexno = '23'
+#your answers to for the form
+input = "Test"
+
+#to get today's date
 today = date.today()
 
-#values of the form
+#xPaths of the form components here
 input_Date = '//*[@id="mG61Hd"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/input'
 input_Index = '//*[@id="mG61Hd"]/div/div/div[2]/div[3]/div/div[2]/div/div[1]/div/div[1]/input'
 input_Class = '//*[@id="mG61Hd"]/div/div/div[2]/div[2]/div/div[2]/div[1]/div[1]/div[1]'
@@ -18,10 +22,12 @@ Class_4E1 = '//*[@id="mG61Hd"]/div/div/div[2]/div[2]/div/div[2]/div[2]/div[3]'
 Feeling = '//*[@id="mG61Hd"]/div/div/div[2]/div[4]/div/div[2]/div/span/div/div[1]/label/div/div[1]/div'
 Acknowledgement = '//*[@id="mG61Hd"]/div/div/div[2]/div[5]/div/div[2]/div/span/div/div/label/div/div[1]/div'
 
+#xPath of the submit button of the form
 submit_but = '//*[@id="mG61Hd"]/div/div/div[3]/div[1]/div/div'
 
 def sleep():
     time.sleep(3)
+
 
 i = 0
 while i < 1:
