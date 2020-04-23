@@ -28,7 +28,6 @@ submit_but = '//*[@id="mG61Hd"]/div/div/div[3]/div[1]/div/div'
 def sleep():
     time.sleep(3)
 
-
 i = 0
 while i < 1:
     browser.find_element_by_xpath(input_Date).send_keys(today.strftime('%d/%m/%Y'))
