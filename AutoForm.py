@@ -2,49 +2,38 @@ import requests
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from datetime import date
 
-#initialise webdriver and the link of the form
+#initialise webdriver
 browser = webdriver.Edge('C:/Users/kaizh/Downloads/msedgedriver.exe')
-browser.get('https://docs.google.com/forms/d/e/1FAIpQLSc8Gm2HKnrSGxAD3NVWi7wPQXgYVKsVs6fnLojxDY20gXqRFg/viewform')
+#link to form
+browser.get('https://docs.google.com/forms/d/e/~~/viewform')
 
-#your answers to for the form
-input = "Test"
-
-#to get today's date
-today = date.today()
+#your input to for the form
+Name = "Test"
 
 #xPaths of the form components here
-input_Date = '//*[@id="mG61Hd"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/input'
-input_Index = '//*[@id="mG61Hd"]/div/div/div[2]/div[3]/div/div[2]/div/div[1]/div/div[1]/input'
-input_Class = '//*[@id="mG61Hd"]/div/div/div[2]/div[2]/div/div[2]/div[1]/div[1]/div[1]'
-Class_4E1 = '//*[@id="mG61Hd"]/div/div/div[2]/div[2]/div/div[2]/div[2]/div[3]'
-Feeling = '//*[@id="mG61Hd"]/div/div/div[2]/div[4]/div/div[2]/div/span/div/div[1]/label/div/div[1]/div'
-Acknowledgement = '//*[@id="mG61Hd"]/div/div/div[2]/div[5]/div/div[2]/div/span/div/div/label/div/div[1]/div'
+input_Name = '//*[@id="mG61Hd"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/input'
+DropDown = '//*[@id="mG61Hd"]/div/div/div[2]/div[4]/div/div[2]/div[1]/div[1]/div[1]'
+DropDownOption = '//*[@id="mG61Hd"]/div/div/div[2]/div[4]/div/div[2]/div[2]/div[3]'
+CheckBox = '//*[@id="mG61Hd"]/div/div/div[2]/div[3]/div/div[2]/div[1]/div/label/div/div[1]'
+RadioBut = '//*[@id="mG61Hd"]/div/div/div[2]/div[2]/div/div[2]/div/span/div/div[1]/label/div/div[1]/div'
 
 #xPath of the submit button of the form
 submit_but = '//*[@id="mG61Hd"]/div/div/div[3]/div[1]/div/div'
 
-def sleep():
-    time.sleep(3)
+#Selenium will find the components of the form via their respective xPaths and do the necessary actions
+browser.find_element_by_xpath(input_Name).send_keys(Name)
+browser.find_element_by_xpath(CheckBox).click()
+browser.find_element_by_xpath(RadioBut).click()
+#Sometimes, Selenium will enter the input too fast which may result in the script ending prematurely
+time.sleep(3)
+browser.find_element_by_xpath(DropDown).click()
+time.sleep(1)
+browser.find_element_by_xpath(DropDownOption).click()
+time.sleep(3)
+browser.find_element_by_xpath(submit_but).click()
 
-i = 0
-while i < 1:
-    browser.find_element_by_xpath(input_Date).send_keys(today.strftime('%d/%m/%Y'))
-    browser.find_element_by_xpath(input_Index).send_keys(indexno)
-    browser.find_element_by_xpath(Feeling).click()
-    browser.find_element_by_xpath(Acknowledgement).click()
-    sleep()
-    browser.find_element_by_xpath(input_Class).click()
-    sleep()
-    browser.find_element_by_xpath(Class_4E1).click()
-    sleep()
-    browser.find_element_by_xpath(submit_but).click()
-
-    i += 1
-
-    sleep()
-    browser.back()
-    sleep()
-
+time.sleep(3)
+browser.quit()
+    
 print('Form completed.')
