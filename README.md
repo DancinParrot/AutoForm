@@ -83,9 +83,15 @@ Basically the same as those above, Copy and Paste:
 ## Submitting
 Whooray! After this last step, your script is completed!
 
-### For Input Box
+### Input Box
 Enter this into the script:
 ```bash
 #Find the element/component via its xPath and automatically enter your input
 browser.find_element_by_xpath(input_Name).send_keys(name)
 ```
+### Radio Button/Check Box/Drop Down/Submit Button
+You should be using the .click() function instead of .send_keys():
+```bash
+browser.find_element_by_xpath(RadioBut).click()
+```
+
