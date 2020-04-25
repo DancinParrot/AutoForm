@@ -81,7 +81,7 @@ Basically the same as those above, Copy and Paste:
 ![](assets/SubmitBut.gif)
 
 ## Submitting
-Hooray! After this last step, your script is completed!
+Hooray! After this last step, your script is good to go!
 
 ### Input Box
 Enter this into the script:
