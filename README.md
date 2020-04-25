@@ -19,12 +19,12 @@ Tested with Google Form.
 ## Setup
 Requests must be installed.
 ```bash
-pip install requests
+$ pip install requests
 ```
 
 Selenium must be installed.
 ```bash
-pip install selenium
+$ pip install selenium
 ```
 Selenium requires a driver to interface with the chosen browser. Hence, drivers need to be installed in order for Selenium to function properly. As drivers vary for different browsers, they can be downloaded here: <br/>
 | Browsers | Link to webdriver |
@@ -39,7 +39,7 @@ browser = webdriver.Edge('C:/Users/name/Downloads/msedgedriver.exe')
 ```
 Run script
 ```bash
-python AutoForm.py
+$ python AutoForm.py
 ```
 
 
