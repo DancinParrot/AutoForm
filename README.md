@@ -33,6 +33,10 @@ Selenium requires a driver to interface with the chosen browser. Hence, drivers 
 |Edge (New and Legacy)|https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/|
 |Firefox|https://github.com/mozilla/geckodriver/releases|
 
+Ideally, the driver should be put in your PATH. If not, you can just manually link Selenium to wherever your driver is:
+```bash
+browser = webdriver.Edge('C:/Users/name/Downloads/msedgedriver.exe')
+```
 Run script
 ```bash
 python AutoForm.py
