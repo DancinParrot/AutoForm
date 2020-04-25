@@ -14,6 +14,7 @@ Tested with Google Form.
   - [Check Box](#eg3-check-box)
   - [Drop Down](#eg4-drop-down)
   - [Submit Button](#eg5-submit-button)
+* [Submitting](#Submitting)
 
 ## Setup
 Requests must be installed.
@@ -25,11 +26,19 @@ Selenium must be installed.
 ```bash
 pip install selenium
 ```
+Selenium requires a driver to interface with the chosen browser. Hence, drivers need to be installed in order for Selenium to function properly. As drivers vary for different browsers, they can be downloaded here: <br/>
+| Browsers | Link to webdriver |
+|---------|---------|
+|Chrome|https://sites.google.com/a/chromium.org/chromedriver/downloads|
+|Edge (New and Legacy)|https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/|
+|Firefox|https://github.com/mozilla/geckodriver/releases|
 
 Run script
 ```bash
 python AutoForm.py
 ```
+
+
 
 ## Configuring the script
 The variables in this script must be configured first to match that of your form.
@@ -67,4 +76,12 @@ Secondly, copy the xPath of your desired option and then paste it into the scrip
 Basically the same as those above, Copy and Paste:
 ![](assets/SubmitBut.gif)
 
+## Submitting
+Whooray! After this last step, your script is completed!
 
+### For Input Box
+Enter this into the script:
+```bash
+#Find the element/component via its xPath and automatically enter your input
+browser.find_element_by_xpath(input_Name).send_keys(name)
+```
