@@ -30,7 +30,10 @@ python AutoForm.py
 The variables in this script must be configured first to match that of your form.
 
 #### Eg.1 Input Box
-To enter an input create a variable in the script with your desired input in quotes ' '.<br/>
+To enter an input create a variable in the script with your desired input in quotes ' ':
+```bash
+name = 'Name goes here.'
+```
 Copy the xPath of the input box from the form using Inspect Element as shown below:
 ![](assets/InputComponent.gif)
 Paste the xPath into the script:
