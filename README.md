@@ -86,7 +86,7 @@ Whooray! After this last step, your script is completed!
 ### Input Box
 Enter this into the script:
 ```bash
-#Find the element/component via its xPath and automatically enter your input
+# Find the element/component via its xPath and automatically enter your input
 browser.find_element_by_xpath(input_Name).send_keys(name)
 ```
 ### Radio Button/Check Box/Drop Down/Submit Button
