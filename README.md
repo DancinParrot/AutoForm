@@ -12,10 +12,10 @@ Tested with Google Form.
   - [Input Box](#eg1-input-box)
   - [Radio Button](#eg2-radio-button)
   - [Check Box](#eg3-check-box)
-  - [Drop Down](eg4-drop-down)
-  - [Submit Button](eg5-submit-button)
+  - [Drop Down](#eg4-drop-down)
+  - [Submit Button](#eg5-submit-button)
 
-### Setup
+## Setup
 Requests must be installed.
 ```bash
 pip install requests
@@ -31,10 +31,10 @@ Run script
 python AutoForm.py
 ```
 
-### Configuring the script
+## Configuring the script
 The variables in this script must be configured first to match that of your form.
 
-#### Eg.1 Input Box
+### Eg.1 Input Box
 To enter an input create a variable in the script with your desired input in quotes ' ':
 ```bash
 name = 'Name goes here.'
@@ -47,23 +47,23 @@ Paste the xPath into the script:
 input_Name = '//*[@id="mG61Hd"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/input'
 ```
 
-#### Eg.2 Radio Button
+### Eg.2 Radio Button
 Select the option listed on the radio buttons first, then copy the xPath of your chosen option as shown below:
 ![](assets/RadioButComponent.gif)
 Paste its xPath into the script. (same as Eg.1)
 
-#### Eg.3 Check Box
+### Eg.3 Check Box
 Basically the same procedure as the Radio Button. Copy and Paste.
 ![](assets/CheckBoxComponent.gif)
 
-#### Eg.4 Drop Down 
+### Eg.4 Drop Down 
 Now this is a bit more complicated than the first 3 as there is 2 seperate parts.<br/>
 Firstly, copy the xPath of the 'Choose' button then paste it into the script (Same as above):
 ![](assets/DropDownComponent1.gif)
 Secondly, copy the xPath of your desired option and then paste it into the script by creating a new variable:
 ![](assets/DropDownComponent2.gif)
 
-#### Eg.5 Submit Button
+### Eg.5 Submit Button
 Basically the same as those above, Copy and Paste:
 ![](assets/SubmitBut.gif)
 
