@@ -70,7 +70,7 @@ Basically the same procedure as the Radio Button. Copy and Paste.
 ![](assets/CheckBoxComponent.gif)
 
 ### Eg.4 Drop Down 
-Now this is a bit more complicated than the first 3 as there is 2 seperate parts.<br/>
+Now this is a bit more complicated than the first 3 as there are 2 seperate parts.<br/>
 Firstly, copy the xPath of the 'Choose' button then paste it into the script (Same as above):
 ![](assets/DropDownComponent1.gif)
 Secondly, copy the xPath of your desired option and then paste it into the script by creating a new variable:
